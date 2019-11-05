@@ -47,7 +47,8 @@
       "get": {
         "summary": "Your GET endpoint",
         "tags": [],
-        "responses": {}
+        "responses": {},
+        "description": ""
       }
     }
   },

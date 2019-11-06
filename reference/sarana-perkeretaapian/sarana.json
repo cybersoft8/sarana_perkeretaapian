@@ -42,14 +42,6 @@
         }
       },
       "parameters": []
-    },
-    "/api/v2": {
-      "get": {
-        "summary": "Your GET endpoint",
-        "tags": [],
-        "responses": {},
-        "description": ""
-      }
     }
   },
   "schemes": [

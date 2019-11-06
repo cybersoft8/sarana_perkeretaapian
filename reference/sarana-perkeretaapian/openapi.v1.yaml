@@ -23,7 +23,7 @@ paths:
           name: Authorization
           description: $2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK
     post:
-      summary: ''
+      summary: POST
       responses:
         '200':
           description: OK
@@ -40,6 +40,16 @@ paths:
           in: header
           name: Authorization
           description: $2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK
+          required: true
+      security:
+        - API Key - 1: []
+      requestBody: {}
+    post:
+      summary: Untuk Endpoint POST
+      responses:
+        '200':
+          description: OK
+    parameters: []
 contact:
   name: AUton aja
   url: autonaja.org
@@ -48,3 +58,10 @@ license:
 host: 'http://172.10.1.16:3000'
 schemes:
   - http
+components:
+  securitySchemes:
+    API Key - 1:
+      name: Authorization
+      type: apiKey
+      in: header
+      description: $2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK

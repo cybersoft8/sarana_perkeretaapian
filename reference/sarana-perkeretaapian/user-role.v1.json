@@ -19,7 +19,14 @@
       "get": {
         "summary": "Your GET endpoint",
         "tags": [],
-        "responses": {},
+        "responses": {
+          "200": {
+            "description": "{\n    \"message\": \"Success\",\n    \"result\": [\n        {\n            \"id\": 1,\n            \"nama\": \"admin\",\n            \"created_at\": null,\n            \"updated_at\": null\n        },\n        {\n            \"id\": 2,\n            \"nama\": \"user\",\n            \"created_at\": null,\n            \"updated_at\": null\n        }\n    ]\n}"
+          },
+          "201": {
+            "description": "Created"
+          }
+        },
         "description": "",
         "parameters": [
           {
@@ -30,7 +37,8 @@
             "name": "Authorization",
             "description": "$2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK"
           }
-        ]
+        ],
+        "requestBody": {}
       },
       "parameters": []
     }

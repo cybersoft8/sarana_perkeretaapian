@@ -1,0 +1,50 @@
+openapi: 3.0.0
+info:
+  title: sarana perkeretaapian
+  version: '1.0'
+  description: api untuk get sarana perkretaapian tapi dengan token ya.
+  license: {}
+  contact:
+    name: Fahrul
+servers:
+  - url: 'http://172.10.1.16:8000'
+    description: server utama
+paths:
+  /api/v1/sarana:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses: {}
+      description: ''
+      parameters:
+        - schema:
+            type: string
+          in: header
+          name: Authorization
+          description: $2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK
+    post:
+      summary: ''
+      responses:
+        '200':
+          description: OK
+    parameters: []
+  /api/v1/user-role:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses: {}
+      description: Endpoint untuk table user-role
+      parameters:
+        - schema:
+            type: string
+          in: header
+          name: Authorization
+          description: $2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK
+contact:
+  name: AUton aja
+  url: autonaja.org
+license:
+  name: 'lisensi dari auton aja, spesial'
+host: 'http://172.10.1.16:3000'
+schemes:
+  - http

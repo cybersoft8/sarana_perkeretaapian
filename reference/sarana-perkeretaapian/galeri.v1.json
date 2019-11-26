@@ -1,5 +1,5 @@
 {
-  "title": "user-role full",
+  "title": "galeri",
   "x-tags": [
     "Todos"
   ],
@@ -17,6 +17,12 @@
           ],
           "format": "date-time"
         },
+        "user_id": {
+          "$ref": "./user.v1.json"
+        },
+        "identitas_id": {
+          "$ref": "./identitas.v1.json"
+        },
         "created_at": {
           "type": "string",
           "format": "date-time"
@@ -24,9 +30,6 @@
         "updated_at": {
           "type": "string",
           "format": "date-time"
-        },
-        "user": {
-          "$ref": "./user.v1.json"
         }
       },
       "required": [

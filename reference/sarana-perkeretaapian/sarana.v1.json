@@ -22,10 +22,16 @@
           "maximum": 1000000
         },
         "nama": {
-          "type": [
-            "string"
-          ],
-          "format": "date-time"
+          "type": "string"
+        },
+        "gambar": {
+          "type": "string"
+        },
+        "deskripsi": {
+          "type": "string"
+        },
+        "is_active": {
+          "type": "string"
         },
         "created_at": {
           "type": "string",
@@ -34,9 +40,6 @@
         "updated_at": {
           "type": "string",
           "format": "date-time"
-        },
-        "user": {
-          "$ref": "./user.v1.json"
         }
       },
       "required": [

@@ -858,6 +858,280 @@
           }
         ]
       }
+    },
+    "/api/v1/galeri": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "examples": {
+              "application/json": {
+                "id": 1,
+                "name": "get food",
+                "completed": false,
+                "completed_at": "1955-04-23T13:22:52.685Z",
+                "created_at": "1994-11-05T03:26:51.471Z",
+                "updated_at": "1989-07-29T11:30:06.701Z"
+              }
+            },
+            "schema": {
+              "$ref": "./sarana.v1.json"
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./galeri.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "id": 1,
+                      "nama": "Admin",
+                      "created_at": "2019-10-28 11:14:16",
+                      "updated_at": "2019-10-28 11:14:16"
+                    }
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "./sarana.v1.json"
+                },
+                "examples": {
+                  "example-1": {}
+                }
+              }
+            },
+            "headers": {}
+          },
+          "404": {
+            "$ref": "../common/openapi.v1.yaml#/responses/404",
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./galeri.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "Not Found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "$2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK"
+          }
+        ],
+        "description": ""
+      },
+      "post": {
+        "summary": "",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./galeri.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "ok"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./galeri.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "Not Found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/galeri/:id": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./galeri.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "id": 1,
+                      "nama": "Admin",
+                      "created_at": "2019-10-28 11:14:16",
+                      "updated_at": "2019-10-28 11:14:16"
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {}
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./galeri.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "Not Found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "$2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK"
+          }
+        ],
+        "requestBody": {}
+      },
+      "put": {
+        "summary": "",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./galeri.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "ok"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./galeri.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "Not Found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {},
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "$2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK"
+          }
+        ]
+      },
+      "delete": {
+        "summary": "",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./galeri.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "ok"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./galeri.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "Not Found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "$2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK"
+          }
+        ]
+      }
     }
   },
   "components": {

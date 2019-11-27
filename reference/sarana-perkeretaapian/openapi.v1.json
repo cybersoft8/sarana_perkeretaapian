@@ -1,30 +1,27 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "user-role",
+    "title": "sarana perkeretaapian",
     "version": "1.0",
-    "description": "Endpoint untuk user-role",
+    "description": "api untuk get sarana perkretaapian tapi dengan token ya.",
     "contact": {
-      "name": "Fahrizal"
+      "name": "Fahrul"
     }
   },
   "servers": [
     {
       "url": "http://172.10.1.16:8000",
-      "description": "User-role"
+      "description": "server utama"
     }
   ],
   "paths": {
-    "/api/v1/user-role": {
+    "/api/v1/sarana": {
       "get": {
         "summary": "Your GET endpoint",
         "tags": [],
         "responses": {
           "200": {
-            "description": "",
-            "schema": {
-              "$ref": "./todo-full.v1.json"
-            },
+            "description": "Success",
             "examples": {
               "application/json": {
                 "id": 1,
@@ -34,21 +31,162 @@
                 "created_at": "1994-11-05T03:26:51.471Z",
                 "updated_at": "1989-07-29T11:30:06.701Z"
               }
-            }
-          },
+            },
+            "schema": {
+              "$ref": "./sarana.v1.json"
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./sarana.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "id": 1,
+                      "user_id": 15,
+                      "user_nama": "ahmad",
+                      "nama": "kereta",
+                      "gambar": "12wtr4ty",
+                      "deskripsi": "kuat",
+                      "is_active": 1,
+                      "created_at": null,
+                      "updated_at": null
+                    }
+                  }
+                }
+              },
               "application/xml": {
                 "schema": {
-                  "type": "object",
-                  "properties": {}
+                  "$ref": "./sarana.v1.json"
+                },
+                "examples": {
+                  "example-1": {}
+                }
+              }
+            },
+            "headers": {}
+          },
+          "404": {
+            "$ref": "../common/openapi.v1.yaml#/responses/404",
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./sarana.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "Not Found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "$2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK"
+          }
+        ],
+        "description": ""
+      },
+      "post": {
+        "summary": "",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./sarana.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "ok"
+                    }
+                  }
                 }
               }
             }
           },
           "404": {
-            "description": "E_ROUTE_NOT_FOUND: Route not found GET /api/v1/"
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./sarana.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "Not Found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/sarana/:id": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./sarana.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "id": 1,
+                      "user_id": 15,
+                      "user_nama": "ahmad",
+                      "nama": "kereta",
+                      "gambar": "12wtr4ty",
+                      "deskripsi": "kuat",
+                      "is_active": 1,
+                      "created_at": null,
+                      "updated_at": null
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {}
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./sarana.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "Not Found"
+                    }
+                  }
+                }
+              }
+            }
           }
         },
-        "description": "",
         "parameters": [
           {
             "schema": {
@@ -61,13 +199,182 @@
         ],
         "requestBody": {}
       },
-      "parameters": []
+      "put": {
+        "summary": "",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./sarana.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "ok"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./user-role.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "Not Found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {},
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "$2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK"
+          }
+        ]
+      },
+      "delete": {
+        "summary": "",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./sarana.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "ok"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./sarana.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "ok"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "$2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK"
+          }
+        ]
+      }
     },
-    "/api/v1/sarana": {
+    "/api/v1/identitas": {
       "get": {
         "summary": "Your GET endpoint",
         "tags": [],
-        "responses": {},
+        "responses": {
+          "200": {
+            "description": "Success",
+            "examples": {
+              "application/json": {
+                "id": 1,
+                "name": "get food",
+                "completed": false,
+                "completed_at": "1955-04-23T13:22:52.685Z",
+                "created_at": "1994-11-05T03:26:51.471Z",
+                "updated_at": "1989-07-29T11:30:06.701Z"
+              }
+            },
+            "schema": {
+              "$ref": "./sarana.v1.json"
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./identitas.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "id": 7,
+                      "user_id": 15,
+                      "user_nama": "ahmad",
+                      "kode": "CC 201 83 07",
+                      "sarana_nama": "Lokomotif",
+                      "kodefikasi_nama": "2 Gandar Penggerak",
+                      "klasifikasi_nama": "Diesel Elektrik",
+                      "tahun": "2001",
+                      "nomor_urut": 17,
+                      "gambar": "1572310963264.jpeg",
+                      "deskripsi": "baik",
+                      "created_at": "2019-10-29 08:02:43",
+                      "updated_at": "2019-10-29 08:02:43"
+                    }
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "./sarana.v1.json"
+                },
+                "examples": {
+                  "example-1": {}
+                }
+              }
+            },
+            "headers": {}
+          },
+          "404": {
+            "$ref": "../common/openapi.v1.yaml#/responses/404",
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./sarana.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "Not Found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
         "description": "",
         "parameters": [
           {
@@ -84,11 +391,483 @@
         "summary": "",
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./identitas.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "ok"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./sarana.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "Not Found"
+                    }
+                  }
+                }
+              }
+            }
           }
         }
+      }
+    },
+    "/api/v1/identitas/:id": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./identitas.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "id": 1,
+                      "nama": "Admin",
+                      "created_at": "2019-10-28 11:14:16",
+                      "updated_at": "2019-10-28 11:14:16"
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {}
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./sarana.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "Not Found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "description": ""
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "$2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK"
+          }
+        ]
       },
-      "parameters": []
+      "delete": {
+        "summary": "",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./identitas.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "ok"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./sarana.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "Not Found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "$2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK"
+          }
+        ]
+      },
+      "put": {
+        "summary": "",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./identitas.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "ok"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./identitas.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "Not Found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {},
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "$2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK"
+          }
+        ]
+      }
+    },
+    "/api/v1/user-role": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "examples": {
+              "application/json": {
+                "id": 1,
+                "name": "get food",
+                "completed": false,
+                "completed_at": "1955-04-23T13:22:52.685Z",
+                "created_at": "1994-11-05T03:26:51.471Z",
+                "updated_at": "1989-07-29T11:30:06.701Z"
+              }
+            },
+            "schema": {
+              "$ref": "./sarana.v1.json"
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./user-role.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "id": 1,
+                      "nama": "Admin",
+                      "created_at": "2019-10-28 11:14:16",
+                      "updated_at": "2019-10-28 11:14:16"
+                    }
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "./sarana.v1.json"
+                },
+                "examples": {
+                  "example-1": {}
+                }
+              }
+            },
+            "headers": {}
+          },
+          "404": {
+            "$ref": "../common/openapi.v1.yaml#/responses/404",
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./user-role.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "Not Found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "description": "",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "$2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK"
+          }
+        ]
+      },
+      "post": {
+        "summary": "",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./user-role.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "ok"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./sarana.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "Not Found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/user-role/:id": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./user-role.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "id": 1,
+                      "nama": "Admin",
+                      "created_at": "2019-10-28 11:14:16",
+                      "updated_at": "2019-10-28 11:14:16"
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {}
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./sarana.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "Not Found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {},
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "$2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK"
+          }
+        ]
+      },
+      "put": {
+        "summary": "",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./user-role.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "ok"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./user-role.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "Not Found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "$2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK"
+          }
+        ],
+        "requestBody": {}
+      },
+      "delete": {
+        "summary": "",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./user-role.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "ok"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./sarana.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "Not Found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "$2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "API Key - 1": {
+        "name": "Authorization",
+        "type": "apiKey",
+        "in": "header",
+        "description": "$2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK"
+      }
     }
   }
 }

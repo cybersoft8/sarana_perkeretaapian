@@ -24,9 +24,6 @@
         "updated_at": {
           "type": "string",
           "format": "date-time"
-        },
-        "user": {
-          "$ref": "./user.v1.json"
         }
       },
       "required": [

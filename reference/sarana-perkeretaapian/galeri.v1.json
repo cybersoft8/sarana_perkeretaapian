@@ -11,17 +11,41 @@
           "minimum": 0,
           "maximum": 1000000
         },
-        "nama": {
-          "type": [
-            "string"
-          ],
-          "format": "date-time"
-        },
         "user_id": {
-          "$ref": "./user.v1.json"
+          "type": "string"
+        },
+        "kode": {
+          "type": "string"
+        },
+        "sarana_id": {
+          "type": "string"
+        },
+        "sarana_nama": {
+          "type": "string"
+        },
+        "kodefikasi_id": {
+          "type": "string"
+        },
+        "kodefikasi_nama": {
+          "type": "string"
         },
         "identitas_id": {
-          "$ref": "./identitas.v1.json"
+          "type": "string"
+        },
+        "identitas_tahun": {
+          "type": "string"
+        },
+        "identitas_nomor_urut": {
+          "type": "string"
+        },
+        "gambar": {
+          "type": "string"
+        },
+        "deskripsi": {
+          "type": "string"
+        },
+        "is_active": {
+          "type": "string"
         },
         "created_at": {
           "type": "string",

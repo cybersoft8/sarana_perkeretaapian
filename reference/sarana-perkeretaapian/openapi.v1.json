@@ -1595,7 +1595,7 @@
                 "examples": {
                   "application/json": {
                     "value": {
-                      "id": 3,
+                      "id": 30,
                       "user_id": 15,
                       "user_nama": "ahmad",
                       "kodefikasi_id": 3,

@@ -225,7 +225,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "./user-role.v1.json"
+                  "$ref": "./sarana.v1.json"
                 },
                 "examples": {
                   "application/json": {
@@ -362,7 +362,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "./sarana.v1.json"
+                  "$ref": "./identitas.v1.json"
                 },
                 "examples": {
                   "application/json": {
@@ -412,7 +412,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "./sarana.v1.json"
+                  "$ref": "./identitas.v1.json"
                 },
                 "examples": {
                   "application/json": {
@@ -458,7 +458,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "./sarana.v1.json"
+                  "$ref": "./identitas.v1.json"
                 },
                 "examples": {
                   "application/json": {
@@ -510,7 +510,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "./sarana.v1.json"
+                  "$ref": "./identitas.v1.json"
                 },
                 "examples": {
                   "application/json": {
@@ -688,7 +688,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "./sarana.v1.json"
+                  "$ref": "./user-role.v1.json"
                 },
                 "examples": {
                   "application/json": {
@@ -734,7 +734,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "./sarana.v1.json"
+                  "$ref": "./user-role.v1.json"
                 },
                 "examples": {
                   "application/json": {
@@ -834,7 +834,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "./sarana.v1.json"
+                  "$ref": "./user-role.v1.json"
                 },
                 "examples": {
                   "application/json": {
@@ -888,9 +888,23 @@
                   "application/json": {
                     "value": {
                       "id": 1,
-                      "nama": "Admin",
-                      "created_at": "2019-10-28 11:14:16",
-                      "updated_at": "2019-10-28 11:14:16"
+                      "user_id": 17,
+                      "kode": "CC 201 83 06",
+                      "sarana_id": "1",
+                      "sarana_nama": "Lokomotif",
+                      "kodefikasi_id": "1",
+                      "kodefikasi_kode": "CC",
+                      "kodefikasi_nama": "2 Gandar Penggerak",
+                      "klasifikasi_id": "2",
+                      "klasifikasi_nama": "Diesel Elektrik",
+                      "identitas_id": 1,
+                      "identitas_tahun": "1983",
+                      "identitas_nomor_urut": "06",
+                      "gambar": "1572316369258.jpeg",
+                      "deskripsi": "aasdasdd",
+                      "is_active": 1,
+                      "created_at": "2019-10-29 09:32:49",
+                      "updated_at": "2019-10-29 09:32:49"
                     }
                   }
                 }
@@ -993,9 +1007,23 @@
                   "application/json": {
                     "value": {
                       "id": 1,
-                      "nama": "Admin",
-                      "created_at": "2019-10-28 11:14:16",
-                      "updated_at": "2019-10-28 11:14:16"
+                      "user_id": 17,
+                      "kode": "CC 201 83 06",
+                      "sarana_id": "1",
+                      "sarana_nama": "Lokomotif",
+                      "kodefikasi_id": "1",
+                      "kodefikasi_kode": "CC",
+                      "kodefikasi_nama": "2 Gandar Penggerak",
+                      "klasifikasi_id": "2",
+                      "klasifikasi_nama": "Diesel Elektrik",
+                      "identitas_id": 1,
+                      "identitas_tahun": "1983",
+                      "identitas_nomor_urut": "06",
+                      "gambar": "1572316369258.jpeg",
+                      "deskripsi": "aasdasdd",
+                      "is_active": 1,
+                      "created_at": "2019-10-29 09:32:49",
+                      "updated_at": "2019-10-29 09:32:49"
                     }
                   }
                 }
@@ -1121,6 +1149,298 @@
             }
           }
         },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "$2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK"
+          }
+        ]
+      }
+    },
+    "/api/v1/klasifikasi": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "examples": {
+              "application/json": {
+                "id": 1,
+                "name": "get food",
+                "completed": false,
+                "completed_at": "1955-04-23T13:22:52.685Z",
+                "created_at": "1994-11-05T03:26:51.471Z",
+                "updated_at": "1989-07-29T11:30:06.701Z"
+              }
+            },
+            "schema": {
+              "$ref": "./sarana.v1.json"
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./klasifikasi.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "id": 3,
+                      "user_id": 15,
+                      "user_nama": "ahmad",
+                      "kodefikasi_id": 3,
+                      "kodefikasi_nama": "Pengkodean Kereta",
+                      "kode": 765,
+                      "nama": "Economy",
+                      "seri_tipe": 17,
+                      "gambar": "1572310321898.png",
+                      "deskripsi": "dewdd",
+                      "is_active": 1,
+                      "created_at": "2019-10-29 07:52:01",
+                      "updated_at": "2019-10-29 07:52:01"
+                    }
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "./sarana.v1.json"
+                },
+                "examples": {
+                  "example-1": {}
+                }
+              }
+            },
+            "headers": {}
+          },
+          "404": {
+            "$ref": "../common/openapi.v1.yaml#/responses/404",
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./klasifikasi.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "Not Found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "description": "",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "$2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK"
+          }
+        ]
+      },
+      "post": {
+        "summary": "",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./klasifikasi.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "ok"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./klasifikasi.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "Not Found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/klasifikasi/:id": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./klasifikasi.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "id": 3,
+                      "user_id": 15,
+                      "user_nama": "ahmad",
+                      "kodefikasi_id": 3,
+                      "kodefikasi_nama": "Pengkodean Kereta",
+                      "kode": 765,
+                      "nama": "Economy",
+                      "seri_tipe": 17,
+                      "gambar": "1572310321898.png",
+                      "deskripsi": "dewdd",
+                      "is_active": 1,
+                      "created_at": "2019-10-29 07:52:01",
+                      "updated_at": "2019-10-29 07:52:01"
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {}
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./klasifikasi.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "Not Found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {},
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "$2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK"
+          }
+        ]
+      },
+      "delete": {
+        "summary": "",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./klasifikasi.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "ok"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./klasifikasi.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "Not Found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "$2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK"
+          }
+        ]
+      },
+      "put": {
+        "summary": "",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./klasifikasi.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "ok"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./klasifikasi.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "Not Found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {},
         "parameters": [
           {
             "schema": {

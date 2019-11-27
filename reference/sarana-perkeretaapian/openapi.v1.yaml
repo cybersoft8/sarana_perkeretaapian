@@ -14,7 +14,26 @@ paths:
     get:
       summary: Your GET endpoint
       tags: []
-      responses: {}
+      responses:
+        '200':
+          description: OK
+          headers: {}
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+            application/xml:
+              schema:
+                type: object
+                properties: {}
+        '':
+          headers: {}
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
       description: ''
       parameters:
         - schema:
@@ -50,6 +69,36 @@ paths:
         '200':
           description: OK
     parameters: []
+  '/api/v1/sarana/:id':
+    parameters: []
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+        '201':
+          description: Created
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+      parameters:
+        - schema:
+            type: string
+          in: header
+          name: Authorization
+          description: $2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK
+    put:
+      summary: ''
+      responses:
+        '200':
+          description: OK
+    delete:
+      summary: ''
+      responses:
+        '200':
+          description: OK
 contact:
   name: AUton aja
   url: autonaja.org

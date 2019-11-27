@@ -11,6 +11,16 @@
           "minimum": 0,
           "maximum": 1000000
         },
+        "user_id": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000
+        },
+        "user_nama": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000
+        },
         "nama": {
           "type": [
             "string"

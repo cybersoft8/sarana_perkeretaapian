@@ -1,0 +1,139 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "sarana perkeretaapian",
+    "version": "1.0",
+    "description": "api untuk get sarana perkretaapian tapi dengan token ya.",
+    "contact": {
+      "name": "Fahrul"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://172.10.1.16:8000",
+      "description": "server utama"
+    }
+  ],
+  "paths": {
+    "/api/v1/sarana": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "examples": {
+              "application/json": {
+                "id": 1,
+                "name": "get food",
+                "completed": false,
+                "completed_at": "1955-04-23T13:22:52.685Z",
+                "created_at": "1994-11-05T03:26:51.471Z",
+                "updated_at": "1989-07-29T11:30:06.701Z"
+              }
+            },
+            "schema": {
+              "$ref": "./models/todo-full.v1.json"
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./sarana.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "id": 1,
+                      "user_id": 15,
+                      "user_nama": "ahmad",
+                      "nama": "kereta",
+                      "gambar": "12wtr4ty",
+                      "deskripsi": "kuat",
+                      "is_active": 1,
+                      "created_at": null,
+                      "updated_at": null
+                    }
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "./sarana.v1.json"
+                },
+                "examples": {
+                  "example-1": {}
+                }
+              }
+            },
+            "headers": {
+              "Message": {
+                "schema": {
+                  "type": "string"
+                },
+                "description": "data sarana"
+              }
+            }
+          },
+          "404": {
+            "$ref": "../common/openapi.v1.yaml#/responses/404"
+          },
+          "500": {
+            "$ref": "../common/openapi.v1.yaml#/responses/500"
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "$2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK"
+          }
+        ],
+        "description": ""
+      },
+      "post": {
+        "summary": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/sarana/:id": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {}
+      },
+      "put": {
+        "summary": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "summary": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "API Key - 1": {
+        "name": "Authorization",
+        "type": "apiKey",
+        "in": "header",
+        "description": "$2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK"
+      }
+    }
+  }
+}

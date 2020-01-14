@@ -3,7 +3,7 @@
   "info": {
     "title": "sarana perkeretaapian",
     "version": "1.0",
-    "description": "api untuk get sarana perkretaapian tapi dengan token ya.",
+    "description": "untuk token liat di header",
     "contact": {
       "name": "Fahrul"
     }

@@ -1,0 +1,30 @@
+{
+  "title": "setup authentication google",
+ "x-tags": [
+    "Todos"
+  ],
+  "allOf": [
+    {
+      "properties": {
+        "google_id": {
+          "type": "string"
+        },
+        "nama": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "photo_profile": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "facebook_id"
+      ]
+    }
+  ],
+  "description": "",
+  "x-examples": {},
+  "type": "object"
+}

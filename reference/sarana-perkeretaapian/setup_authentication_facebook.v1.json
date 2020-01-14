@@ -1,0 +1,30 @@
+{
+  "title": "setup authentication facebook",
+  "x-tags": [
+    "Todos"
+  ],
+  "allOf": [
+    {
+      "properties": {
+        "facebook_id": {
+          "type": "string"
+        },
+        "nama": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "photo_profile": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "facebook_id"
+      ]
+    }
+  ],
+  "description": "",
+  "x-examples": {},
+  "type": "object"
+}

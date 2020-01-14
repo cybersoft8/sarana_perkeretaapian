@@ -17,7 +17,7 @@
   "paths": {
     "/api/v1/sarana": {
       "get": {
-        "summary": "Your GET endpoint",
+        "summary": "Sarana",
         "tags": [],
         "responses": {
           "200": {
@@ -140,7 +140,7 @@
     },
     "/api/v1/sarana/:id": {
       "get": {
-        "summary": "Your GET endpoint",
+        "summary": "Detail Sarana",
         "tags": [],
         "responses": {
           "200": {
@@ -302,7 +302,7 @@
     },
     "/api/v1/identitas": {
       "get": {
-        "summary": "Your GET endpoint",
+        "summary": "Identitas",
         "tags": [],
         "responses": {
           "200": {
@@ -429,7 +429,7 @@
     },
     "/api/v1/identitas/:id": {
       "get": {
-        "summary": "Your GET endpoint",
+        "summary": "Detail Identitas",
         "tags": [],
         "responses": {
           "200": {
@@ -587,7 +587,7 @@
     },
     "/api/v1/user-role": {
       "get": {
-        "summary": "Your GET endpoint",
+        "summary": "user-role",
         "tags": [],
         "responses": {
           "200": {
@@ -705,7 +705,7 @@
     },
     "/api/v1/user-role/:id": {
       "get": {
-        "summary": "Your GET endpoint",
+        "summary": "detail user-role",
         "tags": [],
         "responses": {
           "200": {
@@ -861,7 +861,7 @@
     },
     "/api/v1/galeri": {
       "get": {
-        "summary": "Your GET endpoint",
+        "summary": "galeri",
         "tags": [],
         "responses": {
           "200": {
@@ -993,7 +993,7 @@
     },
     "/api/v1/galeri/:id": {
       "get": {
-        "summary": "Your GET endpoint",
+        "summary": "detail galeri",
         "tags": [],
         "responses": {
           "200": {
@@ -1163,7 +1163,7 @@
     },
     "/api/v1/klasifikasi": {
       "get": {
-        "summary": "Your GET endpoint",
+        "summary": "klasifikasi",
         "tags": [],
         "responses": {
           "200": {
@@ -1290,7 +1290,7 @@
     },
     "/api/v1/klasifikasi/:id": {
       "get": {
-        "summary": "Your GET endpoint",
+        "summary": "detail klasifikasi",
         "tags": [],
         "responses": {
           "200": {
@@ -1455,7 +1455,7 @@
     },
     "/api/v1/kodefikasi": {
       "get": {
-        "summary": "Your GET endpoint",
+        "summary": "kodefikasi",
         "tags": [],
         "responses": {
           "200": {
@@ -1582,7 +1582,7 @@
     },
     "/api/v1/kodefikasi/:id": {
       "get": {
-        "summary": "Your GET endpoint",
+        "summary": "detail kodefikasi",
         "tags": [],
         "responses": {
           "200": {

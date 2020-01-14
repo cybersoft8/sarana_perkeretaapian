@@ -17,7 +17,7 @@
   "paths": {
     "/api/v1/sarana": {
       "get": {
-        "summary": "Sarana",
+        "summary": "",
         "tags": [],
         "responses": {
           "200": {
@@ -96,7 +96,8 @@
             "description": "$2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK"
           }
         ],
-        "description": ""
+        "description": "",
+        "operationId": ""
       },
       "post": {
         "summary": "",
@@ -140,7 +141,7 @@
     },
     "/api/v1/sarana/:id": {
       "get": {
-        "summary": "Detail Sarana",
+        "summary": "",
         "tags": [],
         "responses": {
           "200": {
@@ -302,7 +303,7 @@
     },
     "/api/v1/identitas": {
       "get": {
-        "summary": "Identitas",
+        "summary": "",
         "tags": [],
         "responses": {
           "200": {
@@ -429,7 +430,7 @@
     },
     "/api/v1/identitas/:id": {
       "get": {
-        "summary": "Detail Identitas",
+        "summary": "",
         "tags": [],
         "responses": {
           "200": {
@@ -587,7 +588,7 @@
     },
     "/api/v1/user-role": {
       "get": {
-        "summary": "user-role",
+        "summary": "",
         "tags": [],
         "responses": {
           "200": {
@@ -705,7 +706,7 @@
     },
     "/api/v1/user-role/:id": {
       "get": {
-        "summary": "detail user-role",
+        "summary": "",
         "tags": [],
         "responses": {
           "200": {
@@ -861,7 +862,7 @@
     },
     "/api/v1/galeri": {
       "get": {
-        "summary": "galeri",
+        "summary": "",
         "tags": [],
         "responses": {
           "200": {
@@ -993,7 +994,7 @@
     },
     "/api/v1/galeri/:id": {
       "get": {
-        "summary": "detail galeri",
+        "summary": "",
         "tags": [],
         "responses": {
           "200": {
@@ -1163,7 +1164,7 @@
     },
     "/api/v1/klasifikasi": {
       "get": {
-        "summary": "klasifikasi",
+        "summary": "",
         "tags": [],
         "responses": {
           "200": {
@@ -1290,7 +1291,7 @@
     },
     "/api/v1/klasifikasi/:id": {
       "get": {
-        "summary": "detail klasifikasi",
+        "summary": "",
         "tags": [],
         "responses": {
           "200": {
@@ -1455,7 +1456,7 @@
     },
     "/api/v1/kodefikasi": {
       "get": {
-        "summary": "kodefikasi",
+        "summary": "",
         "tags": [],
         "responses": {
           "200": {
@@ -1582,7 +1583,7 @@
     },
     "/api/v1/kodefikasi/:id": {
       "get": {
-        "summary": "detail kodefikasi",
+        "summary": "",
         "tags": [],
         "responses": {
           "200": {

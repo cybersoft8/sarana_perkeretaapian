@@ -136,7 +136,17 @@
               }
             }
           }
-        }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "$2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK"
+          }
+        ]
       }
     },
     "/api/v1/sarana/:id": {
@@ -425,7 +435,17 @@
               }
             }
           }
-        }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "$2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK"
+          }
+        ]
       }
     },
     "/api/v1/identitas/:id": {
@@ -701,7 +721,17 @@
               }
             }
           }
-        }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "$2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK"
+          }
+        ]
       }
     },
     "/api/v1/user-role/:id": {
@@ -989,7 +1019,17 @@
               }
             }
           }
-        }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "$2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK"
+          }
+        ]
       }
     },
     "/api/v1/galeri/:id": {
@@ -1286,7 +1326,17 @@
               }
             }
           }
-        }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "$2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK"
+          }
+        ]
       }
     },
     "/api/v1/klasifikasi/:id": {
@@ -1578,7 +1628,17 @@
               }
             }
           }
-        }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "$2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK"
+          }
+        ]
       }
     },
     "/api/v1/kodefikasi/:id": {
@@ -1832,6 +1892,253 @@
               "application/json": {
                 "schema": {
                   "$ref": "./setup_authentication_google.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "Not Found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "$2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK"
+          }
+        ]
+      }
+    },
+    "/api/v1/user": {
+      "get": {
+        "summary": "",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./user.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "id": 16,
+                      "user_role_id": 2,
+                      "google_id": null,
+                      "facebook_id": 1234512345,
+                      "nama": "ahmad",
+                      "email": "ahmaad@gmail.com",
+                      "photo_profile": "1234512345.jpg",
+                      "api_token": "$2a$10$/9UcF9Tvg9sStlwUb3Pi4O.yqha5euPUUlOO8Th.TRzb4I0Az6kZq",
+                      "created_at": "2019-10-29 07:33:15",
+                      "updated_at": "2019-11-06 06:39:36"
+                    }
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "./sarana.v1.json"
+                },
+                "examples": {
+                  "example-1": {}
+                }
+              }
+            },
+            "schema": {
+              "$ref": "./sarana.v1.json"
+            },
+            "examples": {
+              "application/json": {
+                "id": 1,
+                "name": "get food",
+                "completed": false,
+                "completed_at": "1955-04-23T13:22:52.685Z",
+                "created_at": "1994-11-05T03:26:51.471Z",
+                "updated_at": "1989-07-29T11:30:06.701Z"
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./user.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "Not Found"
+                    }
+                  }
+                }
+              }
+            },
+            "$ref": "../common/openapi.v1.yaml#/responses/404"
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "$2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK"
+          }
+        ],
+        "description": ""
+      }
+    },
+    "/api/v1/user/:id": {
+      "get": {
+        "summary": "",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./user.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "id": 18,
+                      "user_role_id": 2,
+                      "google_id": null,
+                      "facebook_id": 1251251,
+                      "nama": "afasf",
+                      "email": "asdasd@gmail.com",
+                      "photo_profile": "1251251.jpg",
+                      "api_token": "$2a$10$lQHS93qbZGcExwrZ5ltHpOjs8F6SiMeNx6jFi29.6PtfRvXf9Yxl6",
+                      "created_at": "2019-10-29 09:11:31",
+                      "updated_at": "2019-10-29 12:38:23"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./user.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "Not Found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "$2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK"
+          }
+        ],
+        "requestBody": {}
+      },
+      "put": {
+        "summary": "",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./user.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "ok"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./user.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "Not Found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "$2a$10$PCwO2eNZsPCf/d4I9BAxaOu9X/k0wwIu4MgY5ss.J9MYdgvjA5rCK"
+          }
+        ],
+        "requestBody": {}
+      },
+      "delete": {
+        "summary": "",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./user.v1.json"
+                },
+                "examples": {
+                  "application/json": {
+                    "value": {
+                      "message": "ok"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./user.v1.json"
                 },
                 "examples": {
                   "application/json": {

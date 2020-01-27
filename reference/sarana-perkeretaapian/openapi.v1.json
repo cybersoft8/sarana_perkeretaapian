@@ -10,7 +10,7 @@
   },
   "servers": [
     {
-      "url": "http://172.10.1.16:api.hosting-bersama.com",
+      "url": "http://api.hosting-bersama.com",
       "description": "server utama"
     }
   ],
